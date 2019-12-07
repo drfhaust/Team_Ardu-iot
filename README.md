@@ -3,11 +3,11 @@
 
 # Team Members
 
-1. Olaifa oluwadara.
+1. Olaifa oluwadara
   akolaifa4@gmail.com
-2. Adekola akano.
+2. Adekola akano
   akano.adekola@gmail.com
-3. Dahunsi timilehin.
+3. Dahunsi timilehin
   dahunsitimmy@gmail.com
   
 # Problem
