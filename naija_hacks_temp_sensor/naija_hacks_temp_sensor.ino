@@ -113,7 +113,25 @@ void setup() {
 
 void loop() {
 
-  RF24NetworkHeader headerz(0);
+
+  
+   delay(delayMS);
+
+  sensors_event_t event;
+  dht.temperature().getEvent(&event);
+
+    Serial.print(F("Temperature: "));
+   sendd.voltage=event.temperature*100;
+    Serial.println(F("°C"));
+  dht.humidity().getEvent(&event);
+ 
+    Serial.print(F("Humidity: "));
+   sendd.humidity=event.relative_humidity;
+    Serial.println(F("%"));
+ Serial.println(i);
+i++;
+if (i>=10){
+  RF24NetworkHeader headerz(00);
 
 
    if (network.write(headerz,&sendd, sizeof(sending))) {
@@ -122,6 +140,6 @@ void loop() {
       else  { 
         Serial.println("failed");
       }
-i=0;
+i=0;}
 
 }
