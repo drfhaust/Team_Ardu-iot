@@ -19,7 +19,7 @@ void setup() {
            delay(500);
             Serial.print(".");
   
-         }
+     }
           Serial.println ("");
           Serial.println ("WiFi Connected!");
           Serial.println(WiFi.localIP());
