@@ -1,17 +1,19 @@
+#include "DHTesp.h"
+
+#ifdef ESP32
+#pragma message(THIS EXAMPLE IS FOR ESP8266 ONLY!)
+#error Select ESP8266 board.
+#endif
+
+DHTesp dht;
+
 #include "FirebaseESP8266.h"
 #include <ESP8266WiFi.h>
 #include <WiFiManager.h>
 
-#include <Adafruit_Sensor.h>
-#include <DHT.h>
-#include <DHT_U.h>
 
 
-#define DHTPIN 4    //change to any pin
-#define DHTTYPE    DHT11     // DHT 11
-DHT_Unified dht(DHTPIN, DHTTYPE);
 
-uint32_t delayMS;
 
 
 String path = "/FH8dJILtpnfvjOybVGNyzpCXERc2";
@@ -32,11 +34,7 @@ void setup() {
   Serial.println(WiFi.localIP());
   
   Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
-  dht.begin();
-  sensor_t sensor;
-  dht.temperature().getSensor(&sensor);
-   dht.humidity().getSensor(&sensor);
-  delayMS = sensor.min_delay / 1000;
+    dht.setup(17, DHTesp::DHT11); // Connect DHT sensor to GPIO 17
   pinMode(airPin, INPUT);
   
  
@@ -65,19 +63,10 @@ int airData = analogRead(airPin);
       }
 
 
-      delay(delayMS);
+   delay(dht.getMinimumSamplingPeriod());
 
-  sensors_event_t event;
-  dht.temperature().getEvent(&event);
-
-    Serial.print(F("Temperature: "));
-   float Temperature =event.temperature*100;
-    Serial.println(F("°C"));
-  dht.humidity().getEvent(&event);
- 
-    Serial.print(F("Humidity: "));
-   int Humidity =event.relative_humidity;
-    Serial.println(F("%"));
+  float Humidity = dht.getHumidity();
+  float Temperature = dht.getTemperature();
 
 if (Firebase.setFloat(firebaseData, path+"/Temp", Temperature))
     {
@@ -106,4 +95,4 @@ delay(2000);
 
 
 
-}
+}8
