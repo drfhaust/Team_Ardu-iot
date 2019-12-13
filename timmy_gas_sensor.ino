@@ -68,7 +68,7 @@ int airData = analogRead(airPin);
   float Humidity = dht.getHumidity();
   float Temperature = dht.getTemperature();
 
-if (Firebase.setFloat(firebaseData, path+"/Temp", Temperature))
+if (Firebase.setFloat(firebaseData, path+"/timmy/Temp", Temperature))
     {
       Serial.println("P");
     }
@@ -78,7 +78,7 @@ if (Firebase.setFloat(firebaseData, path+"/Temp", Temperature))
       Serial.println("REASON: " + firebaseData.errorReason());
       }
 
-if (Firebase.setInt(firebaseData, path+"/Humidity", Humidity))
+if (Firebase.setInt(firebaseData, path+"/timmy/Humidity", Humidity))
     {
       Serial.println("P");
     }
