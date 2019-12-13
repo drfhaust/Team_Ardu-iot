@@ -52,7 +52,7 @@ void loop() {
 
 int airData = analogRead(airPin);
 
-  if (Firebase.setInt(firebaseData, path+"/gasSensor", airData))
+  if (Firebase.setInt(firebaseData, path+"/timmy/gasSensor", airData))
     {
       Serial.println("P");
     }
@@ -67,6 +67,7 @@ int airData = analogRead(airPin);
 
   float Humidity = dht.getHumidity();
   float Temperature = dht.getTemperature();
+Serial.println(Temperature);
 
 if (Firebase.setFloat(firebaseData, path+"/timmy/Temp", Temperature))
     {
@@ -78,7 +79,7 @@ if (Firebase.setFloat(firebaseData, path+"/timmy/Temp", Temperature))
       Serial.println("REASON: " + firebaseData.errorReason());
       }
 
-if (Firebase.setInt(firebaseData, path+"/timmy/Humidity", Humidity))
+if (Firebase.setFloat(firebaseData, path+"/timmy/Humidity", Humidity))
     {
       Serial.println("P");
     }
