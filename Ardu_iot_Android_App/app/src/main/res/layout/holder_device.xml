@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_15sdp"
+    android:background="@drawable/device_holder_bg"
+    android:padding="@dimen/_10sdp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/device_type_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bulb:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/node_number_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:text="23239d"
+        app:layout_constraintBottom_toBottomOf="@+id/device_type_tv"
+        app:layout_constraintStart_toEndOf="@+id/device_type_tv"
+        app:layout_constraintTop_toTopOf="@+id/device_type_tv" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/description_1_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="descript 1"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="@+id/device_type_tv"
+        app:layout_constraintTop_toBottomOf="@+id/device_type_tv" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/value_1_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="value 1"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/description_1_tv"
+        app:layout_constraintStart_toEndOf="@+id/description_1_tv"
+        app:layout_constraintTop_toTopOf="@+id/description_1_tv" />
+
+<com.google.android.material.textview.MaterialTextView
+        android:id="@+id/description_2_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="descript 1"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="@+id/description_1_tv"
+        app:layout_constraintTop_toBottomOf="@+id/description_1_tv" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/value_2_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="value 1"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/description_2_tv"
+        app:layout_constraintStart_toEndOf="@+id/description_2_tv"
+        app:layout_constraintTop_toTopOf="@+id/description_2_tv" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/delete_img"
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="@dimen/_17sdp"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

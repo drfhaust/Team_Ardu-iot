@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "485780328975",
+    "firebase_url": "https://arduiot.firebaseio.com",
+    "project_id": "arduiot",
+    "storage_bucket": "arduiot.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:485780328975:android:abb1568a567982596f897a",
+        "android_client_info": {
+          "package_name": "ng.arduiot.ardu_iot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "485780328975-qle87hm20u3j2biled3karcqdhs9cnp4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnrd49ETk_NrmnBHpuE7paHYEDjQ1qq_s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "485780328975-qle87hm20u3j2biled3karcqdhs9cnp4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
