@@ -22,7 +22,7 @@ FirebaseData firebaseData;
 #define FIREBASE_AUTH "6GQMMU5rCCocBJzfIaXRGpVpn4ICxhMhyMhkUWhH"
 
 
-int airPin = A0;
+int airPin = A0;//gas sensor pin
 
 void setup() {
    Serial.begin(115200);
